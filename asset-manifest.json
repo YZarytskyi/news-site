@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/codebridge-test-task/static/css/main.7e302514.css",
+    "main.js": "/codebridge-test-task/static/js/main.3bef5ee9.js",
+    "static/js/423.ac2de918.chunk.js": "/codebridge-test-task/static/js/423.ac2de918.chunk.js",
+    "static/js/212.c30b649e.chunk.js": "/codebridge-test-task/static/js/212.c30b649e.chunk.js",
+    "static/js/991.c04dbd4f.chunk.js": "/codebridge-test-task/static/js/991.c04dbd4f.chunk.js",
+    "index.html": "/codebridge-test-task/index.html",
+    "main.7e302514.css.map": "/codebridge-test-task/static/css/main.7e302514.css.map",
+    "main.3bef5ee9.js.map": "/codebridge-test-task/static/js/main.3bef5ee9.js.map",
+    "423.ac2de918.chunk.js.map": "/codebridge-test-task/static/js/423.ac2de918.chunk.js.map",
+    "212.c30b649e.chunk.js.map": "/codebridge-test-task/static/js/212.c30b649e.chunk.js.map",
+    "991.c04dbd4f.chunk.js.map": "/codebridge-test-task/static/js/991.c04dbd4f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7e302514.css",
+    "static/js/main.3bef5ee9.js"
+  ]
+}

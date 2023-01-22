@@ -4,7 +4,7 @@ import Highlighter from 'react-highlight-words';
 import moment from 'moment';
 import EastIcon from '@mui/icons-material/East';
 import { Article } from 'types/types';
-import { useAppSelector } from 'hooks/redux-hooks';
+import { useSearchParams } from 'react-router-dom';
 import * as S from './ArticleCard.styled';
 
 interface ArticleCardProps {
@@ -12,7 +12,8 @@ interface ArticleCardProps {
 }
 
 export const ArticleCard = ({ article }: ArticleCardProps): JSX.Element => {
-  const query = useAppSelector(state => state.articles.query);
+  const [searchParams] = useSearchParams();
+  const query = searchParams.get('query') || '';
   const date = moment(article.publishedAt).format('MMM Do, YYYY');
   const summary =
     article.summary.length > 100

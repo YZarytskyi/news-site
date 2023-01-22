@@ -1,14 +1,15 @@
 import axios from 'axios';
 import { Article } from 'types/types';
+import { PER_PAGE } from '../components/Articles/Articles';
 
 const articlesApi = axios.create({
   baseURL: 'https://api.spaceflightnewsapi.net/v3',
 });
 
 export const getArticlesByQuery = async (query: string, page: number) => {
-  const start = (page - 1) * 12;
+  const start = (page - 1) * PER_PAGE;
   const getArticles = articlesApi.get<Article[]>(
-    `/articles?summary_contains=${query}&_start=${start}&_limit=12`
+    `/articles?summary_contains=${query}&_start=${start}&_limit=${PER_PAGE}`
   );
   const getArticlesCount = articlesApi.get<number>(
     `/articles/count?summary_contains=${query}`

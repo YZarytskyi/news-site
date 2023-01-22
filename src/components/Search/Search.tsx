@@ -1,16 +1,43 @@
+import { useEffect, useState } from 'react';
 import { Typography } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import { Input } from './Search.styled';
 import { useAppDispatch, useAppSelector } from '../../hooks/redux-hooks';
-import { setQuery } from '../../redux/articles/articlesSlise';
+import { useSearchParams } from 'react-router-dom';
+import useDebounce from '../../hooks/useDebounce';
+import { fetchArticlesByQuery } from '../../redux/articles/articlesThunks';
+import { setPage } from '../../redux/articles/articlesSlise';
 
 export const Search = (): JSX.Element => {
-
-  const query = useAppSelector(state => state.articles.query)
+  const page = useAppSelector(state => state.articles.page);
   const dispatch = useAppDispatch();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [query, setQuery] = useState<string>(() => {
+    const searchQuery = searchParams.get('query');
+    return searchQuery?.toLowerCase() || '';
+  });
+
+  const debouncedQuery = useDebounce<string>(query, 250);
+
+  useEffect(() => {
+    if (query) {
+      dispatch(fetchArticlesByQuery({ query: debouncedQuery, page }));
+    }
+  }, [page, debouncedQuery]);
+
+  useEffect(() => {
+    dispatch(setPage(1));
+    if (query) {
+      searchParams.set('query', query.trim().toLowerCase());
+      setSearchParams(searchParams);
+      return;
+    }
+    searchParams.delete('query');
+    setSearchParams(searchParams);
+  }, [query]);
 
   const onChangeInput: React.ChangeEventHandler<HTMLInputElement> = e => {
-    dispatch(setQuery(e.target.value));
+    setQuery(e.target.value);
   };
 
   return (

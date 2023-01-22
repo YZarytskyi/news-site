@@ -1,12 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { Article } from 'types/types';
-import { fetchArticlesByQuery } from './articlesThunks';
+import { fetchArticleById, fetchArticlesByQuery } from './articlesThunks';
 
 interface InitialState {
   articles: Article[];
   articlesCount: number;
   selectedArticle: Article | null;
-  query: string;
+  page: number;
   isLoading: boolean;
   error: null | string;
 }
@@ -15,7 +15,7 @@ const initialState: InitialState = {
   articles: [],
   articlesCount: 0,
   selectedArticle: null,
-  query: '',
+  page: 1,
   isLoading: false,
   error: null,
 };
@@ -30,9 +30,12 @@ export const articlesSlice = createSlice({
     removeSelectedArticle: state => {
       state.selectedArticle = null;
     },
-    setQuery: (state, action) => {
-      state.query = action.payload;
+    setPage: (state, action) => {
+      state.page = action.payload
     },
+    incrementPage: (state) => {
+      state.page = state.page + 1
+    }
   },
   extraReducers: builder => {
     builder
@@ -44,7 +47,7 @@ export const articlesSlice = createSlice({
         if (Array.isArray(action.payload)) {
           state.articles = [...state.articles, ...action.payload];
         } else {
-          state.articles = [...state.articles, ...action.payload.articles];
+          state.articles = action.payload.articles;
           state.articlesCount = action.payload.count;
         }
         state.isLoading = false;
@@ -53,10 +56,23 @@ export const articlesSlice = createSlice({
         state.error = action.payload;
         state.isLoading = false;
       });
+    builder
+      .addCase(fetchArticleById.pending, state => {
+        state.isLoading = true;
+      })
+      .addCase(fetchArticleById.fulfilled, (state, action) => {
+        state.error = null;
+        state.selectedArticle = action.payload
+        state.isLoading = false;
+      })
+      .addCase(fetchArticleById.rejected, (state, action: any) => {
+        state.error = action.payload;
+        state.isLoading = false;
+      });
   },
 });
 
-export const { clearArticles, removeSelectedArticle, setQuery } =
+export const { clearArticles, removeSelectedArticle, setPage, incrementPage } =
   articlesSlice.actions;
 
 export const articlesReducer = articlesSlice.reducer;

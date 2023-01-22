@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/212.c30b649e.chunk.js","mappings":"yHAIA,UAJoB,WAClB,OAAO,uBAAG,WACZ,C","sources":["components/ArticlePage/ArticlePage.tsx"],"sourcesContent":["const ArticlePage = () => {\r\n  return <p>Article</p>;\r\n};\r\n\r\nexport default ArticlePage;"],"names":[],"sourceRoot":""}

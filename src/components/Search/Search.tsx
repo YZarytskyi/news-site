@@ -20,9 +20,7 @@ export const Search = (): JSX.Element => {
   const debouncedQuery = useDebounce<string>(query, 250);
 
   useEffect(() => {
-    if (query) {
-      dispatch(fetchArticlesByQuery({ query: debouncedQuery, page }));
-    }
+    dispatch(fetchArticlesByQuery({ query: debouncedQuery, page }));
   }, [page, debouncedQuery]);
 
   useEffect(() => {

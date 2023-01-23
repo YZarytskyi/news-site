@@ -55,5 +55,11 @@ export const GoBackLink = styled(Link)`
   display: flex;
   align-items: center;
   gap: 6px;
+  color: #363636;
   font-weight: 700;
+`;
+
+export const ArrowLeft = styled.svg`
+  width: 12px;
+  height: 10px;
 `;

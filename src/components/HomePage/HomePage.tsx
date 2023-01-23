@@ -2,7 +2,7 @@ import Container from '@mui/material/Container';
 import { Articles } from '../Articles/Articles';
 import { Search } from '../Search/Search';
 
-function Home() {
+function HomePage() {
   return (
     <Container
       maxWidth={false}
@@ -15,4 +15,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default HomePage;

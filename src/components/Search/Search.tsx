@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
-import { Typography } from '@mui/material';
-import SearchIcon from '@mui/icons-material/Search';
-import { Input } from './Search.styled';
-import { useAppDispatch, useAppSelector } from '../../hooks/redux-hooks';
 import { useSearchParams } from 'react-router-dom';
-import useDebounce from '../../hooks/useDebounce';
-import { fetchArticlesByQuery } from '../../redux/articles/articlesThunks';
-import { setPage } from '../../redux/articles/articlesSlise';
+import { Typography } from '@mui/material';
+import { useAppDispatch, useAppSelector } from 'hooks/redux-hooks';
+import useDebounce from 'hooks/useDebounce';
+import { setPage } from 'redux/articles/articlesSlise';
+import { fetchArticlesByQuery } from 'redux/articles/articlesThunks';
+import sprite from 'assets/icons.svg';
+import { Input, SearchIcon } from './Search.styled';
 
 export const Search = (): JSX.Element => {
   const page = useAppSelector(state => state.articles.page);
@@ -48,7 +48,11 @@ export const Search = (): JSX.Element => {
       <Input
         onChange={onChangeInput}
         value={query}
-        startAdornment={<SearchIcon />}
+        startAdornment={
+          <SearchIcon>
+            <use href={`${sprite}#icon-search`} />
+          </SearchIcon>
+        }
         placeholder="Space news"
       />
     </>

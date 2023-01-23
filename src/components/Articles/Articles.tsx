@@ -3,9 +3,9 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 import { useAppDispatch, useAppSelector } from 'hooks/redux-hooks';
 import { ArticleCard } from '../ArticleCard/ArticleCard';
 import { incrementPage } from 'redux/articles/articlesSlise';
-import { StyledGrid } from './Articles.styled';
+import { Loading, StyledGrid } from './Articles.styled';
 
-export const PER_PAGE: 6 = 6;
+export const PER_PAGE: 12 = 12;
 
 export const Articles = () => {
   const dispatch = useAppDispatch();
@@ -15,15 +15,18 @@ export const Articles = () => {
 
   const hasMore = articlesCount - page * PER_PAGE > 0;
 
+  if (isLoading) {
+    return <Loading>Loading...</Loading>;
+  }
+
   return (
     <>
       <Typography fontWeight={600} mt={5}>
         Results: {articlesCount}
       </Typography>
       <Divider />
-      {isLoading && <p>Loading...</p>}
       <InfiniteScroll
-        dataLength={articlesCount}
+        dataLength={articles.length}
         next={() => {
           dispatch(incrementPage());
         }}

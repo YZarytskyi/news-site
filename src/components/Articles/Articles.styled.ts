@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import Grid from "@mui/material/Grid/Grid";
+import styled from 'styled-components';
+import Grid from '@mui/material/Grid/Grid';
 
 export const StyledGrid = styled(Grid)`
   display: grid;
@@ -7,4 +7,9 @@ export const StyledGrid = styled(Grid)`
   grid-auto-rows: 1fr;
   gap: 45px;
   margin-top: 45px;
-`
+`;
+
+export const Loading = styled.p`
+  margin-top: 40px;
+  font-weight: 600;
+`;

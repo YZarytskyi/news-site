@@ -12,3 +12,8 @@ export const Input = styled(OutlinedInput)`
     padding: 13px 20px; 
   }
 `
+
+export const SearchIcon = styled.svg`
+  width: 20px;
+  height: 20px;
+`

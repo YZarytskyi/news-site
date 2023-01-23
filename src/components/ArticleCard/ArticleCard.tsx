@@ -1,10 +1,9 @@
 import { CardMedia, Typography } from '@mui/material';
-import CalendarTodayOutlinedIcon from '@mui/icons-material/CalendarTodayOutlined';
+import { useLocation, useSearchParams } from 'react-router-dom';
 import Highlighter from 'react-highlight-words';
 import moment from 'moment';
-import EastIcon from '@mui/icons-material/East';
 import { Article } from 'types/types';
-import { useSearchParams } from 'react-router-dom';
+import sprite from 'assets/icons.svg';
 import * as S from './ArticleCard.styled';
 
 interface ArticleCardProps {
@@ -12,6 +11,7 @@ interface ArticleCardProps {
 }
 
 export const ArticleCard = ({ article }: ArticleCardProps): JSX.Element => {
+  const location = useLocation();
   const [searchParams] = useSearchParams();
   const query = searchParams.get('query') || '';
   const date = moment(article.publishedAt).format('MMM Do, YYYY');
@@ -22,7 +22,7 @@ export const ArticleCard = ({ article }: ArticleCardProps): JSX.Element => {
 
   return (
     <S.StyledGrid item>
-      <S.StyledLink to={`/${article.id}`}>
+      <S.StyledLink to={`/${article.id}`} state={location}>
         <S.StyledCard variant="outlined">
           <CardMedia
             component="img"
@@ -33,7 +33,9 @@ export const ArticleCard = ({ article }: ArticleCardProps): JSX.Element => {
           />
           <S.StyledCardContent>
             <S.Date>
-              <CalendarTodayOutlinedIcon sx={{ width: 14, height: 14 }} />{' '}
+              <S.CalendarIcon>
+                <use href={`${sprite}#icon-calendar`} />
+              </S.CalendarIcon>
               {date}
             </S.Date>
             <Typography
@@ -58,7 +60,10 @@ export const ArticleCard = ({ article }: ArticleCardProps): JSX.Element => {
               />
             </Typography>
             <S.ReadMore>
-              Read more <EastIcon />
+              Read more
+              <S.ArrowRight>
+                <use href={`${sprite}#icon-arrow-right`} />
+              </S.ArrowRight>
             </S.ReadMore>
           </S.StyledCardContent>
         </S.StyledCard>

@@ -18,8 +18,18 @@ export const StyledCard = styled(Card)`
   }
 `;
 
+export const ArrowRight = styled.svg`
+  width: 12px;
+  height: 10px;
+  transform-origin: left;
+  transition: transform 300ms cubic-bezier(0.215, 0.610, 0.355, 1);
+`;
+
 export const StyledLink = styled(Link)`
   text-decoration: none;
+  &:hover ${ArrowRight} {
+    transform: scaleX(1.5);
+  }
 `;
 
 export const StyledCardContent = styled(CardContent)`
@@ -39,11 +49,17 @@ export const Date = styled.p`
   margin-bottom: 24px;
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 8px;
   color: #363636;
   font-size: 14px;
   line-height: 1.5;
   opacity: 0.6;
+`;
+
+export const CalendarIcon = styled.svg`
+  width: 16px;
+  height: 16px;
+  margin-bottom: 3px;
 `;
 
 export const ReadMore = styled(Typography)`

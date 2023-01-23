@@ -40,7 +40,9 @@ export const articlesSlice = createSlice({
   extraReducers: builder => {
     builder
       .addCase(fetchArticlesByQuery.pending, state => {
-        state.isLoading = true;
+        if (state.page === 1) {
+          state.isLoading = true;
+        }
       })
       .addCase(fetchArticlesByQuery.fulfilled, (state, action) => {
         state.error = null;

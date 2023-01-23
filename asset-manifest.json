@@ -1,19 +1,20 @@
 {
   "files": {
-    "main.css": "/codebridge-test-task/static/css/main.7e302514.css",
-    "main.js": "/codebridge-test-task/static/js/main.9c5ec5d2.js",
-    "static/js/781.0569e2c3.chunk.js": "/codebridge-test-task/static/js/781.0569e2c3.chunk.js",
-    "static/js/491.8c50b3b2.chunk.js": "/codebridge-test-task/static/js/491.8c50b3b2.chunk.js",
-    "static/js/675.22687952.chunk.js": "/codebridge-test-task/static/js/675.22687952.chunk.js",
+    "main.css": "/codebridge-test-task/static/css/main.f8307010.css",
+    "main.js": "/codebridge-test-task/static/js/main.134c06a3.js",
+    "static/js/541.3d89373f.chunk.js": "/codebridge-test-task/static/js/541.3d89373f.chunk.js",
+    "static/js/491.4fd9b6fc.chunk.js": "/codebridge-test-task/static/js/491.4fd9b6fc.chunk.js",
+    "static/js/501.85f9487c.chunk.js": "/codebridge-test-task/static/js/501.85f9487c.chunk.js",
+    "static/media/icons.svg": "/codebridge-test-task/static/media/icons.17bec1873ab665758b3ac95be8763c12.svg",
     "index.html": "/codebridge-test-task/index.html",
-    "main.7e302514.css.map": "/codebridge-test-task/static/css/main.7e302514.css.map",
-    "main.9c5ec5d2.js.map": "/codebridge-test-task/static/js/main.9c5ec5d2.js.map",
-    "781.0569e2c3.chunk.js.map": "/codebridge-test-task/static/js/781.0569e2c3.chunk.js.map",
-    "491.8c50b3b2.chunk.js.map": "/codebridge-test-task/static/js/491.8c50b3b2.chunk.js.map",
-    "675.22687952.chunk.js.map": "/codebridge-test-task/static/js/675.22687952.chunk.js.map"
+    "main.f8307010.css.map": "/codebridge-test-task/static/css/main.f8307010.css.map",
+    "main.134c06a3.js.map": "/codebridge-test-task/static/js/main.134c06a3.js.map",
+    "541.3d89373f.chunk.js.map": "/codebridge-test-task/static/js/541.3d89373f.chunk.js.map",
+    "491.4fd9b6fc.chunk.js.map": "/codebridge-test-task/static/js/491.4fd9b6fc.chunk.js.map",
+    "501.85f9487c.chunk.js.map": "/codebridge-test-task/static/js/501.85f9487c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7e302514.css",
-    "static/js/main.9c5ec5d2.js"
+    "static/css/main.f8307010.css",
+    "static/js/main.134c06a3.js"
   ]
 }

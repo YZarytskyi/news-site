@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "homepage": "https://yzarytskyi.github.io/codebridge-test-task",
+  "homepage": "https://yzarytskyi.github.io/news-site",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.5",

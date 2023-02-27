@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/codebridge-test-task/static/css/main.460b2763.css",
-    "main.js": "/codebridge-test-task/static/js/main.af50a8c4.js",
-    "static/js/541.520288f7.chunk.js": "/codebridge-test-task/static/js/541.520288f7.chunk.js",
-    "static/js/491.0ddbfbe1.chunk.js": "/codebridge-test-task/static/js/491.0ddbfbe1.chunk.js",
-    "static/js/501.85f9487c.chunk.js": "/codebridge-test-task/static/js/501.85f9487c.chunk.js",
-    "static/media/icons.svg": "/codebridge-test-task/static/media/icons.17bec1873ab665758b3ac95be8763c12.svg",
-    "index.html": "/codebridge-test-task/index.html",
-    "main.460b2763.css.map": "/codebridge-test-task/static/css/main.460b2763.css.map",
-    "main.af50a8c4.js.map": "/codebridge-test-task/static/js/main.af50a8c4.js.map",
-    "541.520288f7.chunk.js.map": "/codebridge-test-task/static/js/541.520288f7.chunk.js.map",
-    "491.0ddbfbe1.chunk.js.map": "/codebridge-test-task/static/js/491.0ddbfbe1.chunk.js.map",
-    "501.85f9487c.chunk.js.map": "/codebridge-test-task/static/js/501.85f9487c.chunk.js.map"
+    "main.css": "/news-site/static/css/main.460b2763.css",
+    "main.js": "/news-site/static/js/main.a7ea8ad5.js",
+    "static/js/541.520288f7.chunk.js": "/news-site/static/js/541.520288f7.chunk.js",
+    "static/js/491.0ddbfbe1.chunk.js": "/news-site/static/js/491.0ddbfbe1.chunk.js",
+    "static/js/501.85f9487c.chunk.js": "/news-site/static/js/501.85f9487c.chunk.js",
+    "static/media/icons.svg": "/news-site/static/media/icons.17bec1873ab665758b3ac95be8763c12.svg",
+    "index.html": "/news-site/index.html",
+    "main.460b2763.css.map": "/news-site/static/css/main.460b2763.css.map",
+    "main.a7ea8ad5.js.map": "/news-site/static/js/main.a7ea8ad5.js.map",
+    "541.520288f7.chunk.js.map": "/news-site/static/js/541.520288f7.chunk.js.map",
+    "491.0ddbfbe1.chunk.js.map": "/news-site/static/js/491.0ddbfbe1.chunk.js.map",
+    "501.85f9487c.chunk.js.map": "/news-site/static/js/501.85f9487c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.460b2763.css",
-    "static/js/main.af50a8c4.js"
+    "static/js/main.a7ea8ad5.js"
   ]
 }
